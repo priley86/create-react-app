@@ -123,6 +123,8 @@ module.exports = {
 };
 
 const ownPackageJson = require('../package.json');
+
+// finds react-rescripts, even when hoisted
 const reactScriptsPath = findUp.sync(`node_modules/${ownPackageJson.name}`, {
   cwd: resolveApp('.'),
 });
