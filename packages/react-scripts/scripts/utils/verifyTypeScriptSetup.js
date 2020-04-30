@@ -123,7 +123,8 @@ function verifyTypeScriptSetup() {
     },
     resolveJsonModule: { value: true, reason: 'to match webpack loader' },
     isolatedModules: { value: true, reason: 'implementation limitation' },
-    noEmit: { value: true },
+    // noEmit should be configurable if you are emitting types from a monorepo shared library package
+    // noEmit: { value: true },
     jsx: {
       parsedValue: ts.JsxEmit.React,
       suggested: 'react',
